@@ -5,6 +5,10 @@ import Testimonials from "../pages/Testimonials";
 import TestimonialNew from "../pages/TestimonialNew";
 import TestimonialEdit from "../pages/TestimonialEdit";
 import TestimonialShow from "../pages/TestimonialShow";
+import Home from "../pages/Home";
+import Projects from "../pages/Projects";
+import About from "../pages/About";
+import Contact from "../pages/Contact";
 
 const Main = (props) => {
     const URL = "http://localhost:8000"
@@ -57,6 +61,10 @@ const Main = (props) => {
     return (
         <main>
             <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
                 <Route path="/testimonials" element={<Testimonials testimonials={testimonials}/>} />
                 <Route path="/testimonials/new" element={<TestimonialNew testimonials={testimonials} createTestimonial={createTestimonial}/>} />
                 <Route path="/testimonials/:id/edit" element={<TestimonialEdit testimonials={testimonials} updateTestimonial={updateTestimonial}/>} />
