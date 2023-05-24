@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useParams } from "react-router-dom"
 import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
+import React from "react";
 
 const TestimonialEdit = (props) => {
     const navigate = useNavigate()
@@ -88,7 +89,7 @@ const TestimonialEdit = (props) => {
                                         placeholder="Location"
                                         onChange={handleChanges}
                                     />
-                            <input className="new-button" type="submit" value="Create Testimonial" />
+                            <input className="new-button" type="submit" value="Update Testimonial" />
                     </form>
                 </div>
             )

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
+import React from "react";
 
 const TestimonialNew = (props) => {
     const navigate = useNavigate()

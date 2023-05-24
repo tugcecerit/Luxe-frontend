@@ -59,36 +59,21 @@ code {
   object-fit: cover;
 }
 
-.profile {
-  font-size: 10px;
-}
 
 .logIn {
-  margin-top: -20px;
-  background-color: gray;
+  background: none;
   border: none;
-  border-radius: 5px;
   color: white;
-  padding: 5px 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-  transition-duration: 0.4s;
+  margin-top: -10px;
 }
 
 .logOut {
-  margin-top: -9px;
-  background-color: gray;
+  background: none;
   border: none;
-  border-radius: 5px;
   color: white;
-  padding: 5px 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-  transition-duration: 0.4s;
+  margin-top: -10px;
+}
+
+.mx-2 {
+  background-color: #232622;
 }

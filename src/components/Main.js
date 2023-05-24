@@ -9,6 +9,9 @@ import Home from "../pages/Home";
 import Projects from "../pages/Projects";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
+import Store from "../pages/Store";
+import Success from "../pages/Success";
+import Cancel from "../pages/Cancel";
 
 const Main = (props) => {
     const URL = "http://localhost:8000"
@@ -69,6 +72,9 @@ const Main = (props) => {
                 <Route path="/testimonials/new" element={<TestimonialNew testimonials={testimonials} createTestimonial={createTestimonial}/>} />
                 <Route path="/testimonials/:id/edit" element={<TestimonialEdit testimonials={testimonials} updateTestimonial={updateTestimonial}/>} />
                 <Route path="/testimonials/:id" element={<TestimonialShow testimonials={testimonials} deleteTestimonial={deleteTestimonial}/>} />
+                <Route path="store" index element={<Store />} />
+                <Route path="success" element={<Success />} />
+                <Route path="cancel" element={<Cancel />} />            
             </Routes>
         </main>
     )

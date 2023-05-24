@@ -1,5 +1,6 @@
 import { Parallax } from 'react-parallax';
 import Kitchen from '../img/Kitchen.jpg'
+import React from "react";
 
 const ThirdImage = () => (
     <Parallax className='image' bgImage={Kitchen} strength={800}>
