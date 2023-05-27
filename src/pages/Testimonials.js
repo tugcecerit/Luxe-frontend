@@ -1,15 +1,30 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Testimonials = (props) => {
-    const testimonials = props.testimonials
+    const { isAuthenticated, loginWithRedirect } = useAuth0();
+    const navigate = useNavigate();
+    const testimonials = props.testimonials;
+
+    const handleNewTestimonial = () => {
+        if (isAuthenticated) {
+            navigate("/testimonials/new");
+        } else {
+            loginWithRedirect();
+        }
+    };
+
     const loaded = () => {
         return (
             <section className="index">
                 <div className="container">
                     <div className="heading-container">
                         <h1>Testimonials</h1>
-                        <Button to={`/testimonials/new`} label="NEW" />
+                        {isAuthenticated && (
+                            <button onClick={handleNewTestimonial}>NEW</button>
+                        )}
                     </div>
                     <div className="row g-4">
                         {testimonials.map((testimonial) => {
@@ -20,24 +35,26 @@ const Testimonials = (props) => {
                                     <p>{testimonial.opinion}</p>
                                     <p>{testimonial.createdBy}</p>
                                     <p>{testimonial.location}</p>
-                                    <Button to={`/testimonials/${testimonial._id}`} label="VIEW" />
-                                    <Button to={`/testimonials/${testimonial._id}/edit`} label="UPDATE" />
+                                    {isAuthenticated && (
+                                        <Button to={`/testimonials/${testimonial._id}/edit`} label="UPDATE" />
+                                    )}
+                                    {isAuthenticated && (
+                                        <Button to={`/testimonials/${testimonial._id}`} label="VIEW" />
+                                    )}
                                 </div>
-                            )
+                            );
                         })}
                     </div>
                 </div>
             </section>
-        )
-    }
+        );
+    };
 
     const loading = () => {
-        return (
-                <h1>Loading...</h1>
-        )
-    }
+        return <h1>Loading...</h1>;
+    };
 
-        return props.testimonials ? loaded() : loading();
-}
+    return testimonials ? loaded() : loading();
+};
 
 export default Testimonials;

@@ -1,8 +1,10 @@
 import {useParams, useNavigate} from "react-router-dom"
 import { Link } from 'react-router-dom';
 import React from "react";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const TestimonialShow= (props) => {
+    const { isAuthenticated, loginWithRedirect } = useAuth0();
     const params = useParams()
     const navigate = useNavigate()
     const id = params.id
@@ -10,10 +12,13 @@ const TestimonialShow= (props) => {
     const testimonial = testimonials.find((p) => p._id === id)
 
     const deleteTestimonial = (event) => {
-        event.preventDefault()
-        props.deleteTestimonial(testimonial._id)
-        navigate('/testimonials')
-    }
+        if (isAuthenticated) {
+            props.deleteTestimonial(testimonial._id)
+            navigate('/testimonials')
+        } else {
+            loginWithRedirect();
+        }
+    };
 
     const loaded = () => {
         return (

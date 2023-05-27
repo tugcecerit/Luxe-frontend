@@ -1,10 +1,11 @@
 import React, { useState, useContext } from 'react';
-import { Nav, Navbar, Container, Button, Modal } from 'react-bootstrap'
+import { Nav, Navbar, Container, Modal } from 'react-bootstrap'
 import Profile from './Profile';
 import LoginButton from './LoginButton';
 import LogoutButton from './LogoutButton';
 import { CartContext } from '../CartContext';
 import CartProduct from './CartProduct';
+import Checkout from './Checkout';
 
 function NavBar() {
   const cart = useContext(CartContext)
@@ -23,22 +24,6 @@ function NavBar() {
     setShow(true)
   }
 
-  const checkout = async () => {
-    await fetch('http://localhost:8000/checkout', {
-        method: "POST",
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({items: cart.items})
-    }).then((response) => {
-        return response.json();
-    }).then((response) => {
-        if(response.url) {
-            window.location.assign(response.url);
-        }
-    });
-}
-
   const productsCount = cart.items.reduce((sum, product) => sum + product.quantity, 0);
 
   return (
@@ -47,8 +32,8 @@ function NavBar() {
       className="nav"
       collapseOnSelect
       expand="lg"
-      bg="dark"
       variant="dark"
+      style={{ backgroundColor: "" }}
     >
       <Container className={isNavbarOpen ? 'container-open' : ''}>
         <Navbar.Brand href="/">LUXE</Navbar.Brand>
@@ -65,15 +50,15 @@ function NavBar() {
             <Nav.Link href="/contact">Contact Us</Nav.Link>
           </Nav>
           <Nav className="profile">
+          <Nav.Link eventKey={2}  href="#" className='navbar-button'>
+              <Profile fontSize="16px" />
+            </Nav.Link>
           <button className="cart" onClick={handleShow}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-bag" viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="29" fill="currentColor" className="bi bi-bag" viewBox="0 0 16 16">
             <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
             <text x="5.5" y="12" fill="white" fontSize="7">{productsCount}</text>
             </svg>
             </button>
-            <Nav.Link eventKey={2} href="#" className='navbar-button'>
-              <Profile fontSize="16px" />
-            </Nav.Link>
             <Nav.Link eventKey={2} href="#" className='navbar-button'>
               <LoginButton />
               <LogoutButton />   
@@ -116,9 +101,7 @@ function NavBar() {
                     <CartProduct key={idx} id={currentProduct.id} quantity={currentProduct.quantity} />
                 ))}
                 <h1>Total: {cart.getTotalCost().toFixed(2)}</h1>
-                <Button variant="success" onClick={checkout}>
-                    Purchase items!
-                </Button>
+                <Checkout />
                 </>
                 :
                 <h1>There are no items in your cart!</h1>}

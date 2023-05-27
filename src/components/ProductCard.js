@@ -12,6 +12,7 @@ function ProductCard(props) {
         <Card>
             <Card.Body>
                 <Card.Title>{product.title}</Card.Title>
+                <img src={product.img} alt={product.title} style={{ width: '200px', height: '200px' }} />
                 <Card.Text>${product.price}</Card.Text>
                 {productQuantity > 0 ?
                 <>
