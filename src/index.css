@@ -1,8 +1,10 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif; */
+  /* font-family: medium-content-sans-serif-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; */
+  font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #232622;
@@ -42,7 +44,7 @@ code {
     margin: auto;
     z-index: 1;
     font-size: 1rem;
-    height: 5rem;
+    height: 6rem;
     backdrop-filter: blur(8px);
 }
 
@@ -59,21 +61,181 @@ code {
   object-fit: cover;
 }
 
-
 .logIn {
   background: none;
   border: none;
-  color: white;
+  color: #6c757d!important;
   margin-top: -10px;
 }
 
 .logOut {
   background: none;
   border: none;
-  color: white;
+  color: #6c757d!important;
   margin-top: -10px;
 }
 
 .mx-2 {
   background-color: #232622;
+}
+
+.services {
+  margin: auto;
+  justify-content: center;
+  width: 80%;
+  font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 16px;
+  letter-spacing: .5px;
+  line-height: 1.6em;
+  color: #4c4c4c;
+}
+
+.services-parts {
+  padding: 5%;
+}
+
+h5 {
+  color: #5d5d5d;
+  padding-bottom: 1%;
+  font-size: 25px;
+}
+
+.parallax-container {
+  padding: 10%;
+  margin: auto;
+  justify-content: center;
+  font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 17px;
+  letter-spacing: .5px;
+  line-height: 1.7em;
+  color: #000000;
+}
+
+.image {
+  margin: 0;
+  padding: 0;
+}
+
+.social-media { 
+  color: inherit; 
+  text-decoration: none;
+} 
+
+.social-media:hover { 
+  color:#989595; 
+  text-decoration: none;
+} 
+
+.delete-button, .new-button {
+  background: none;
+  border: none;
+}
+
+.index {
+  background-image: url("https://www.home-designing.com/wp-content/uploads/2018/04/Dark-living-room-scheme.jpg");
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+
+.new-button {
+  margin: 10px;
+  position: fixed;
+  top: 10%;
+  right: 10%;
+}
+
+.return-link {
+  margin: 10px;
+  position: fixed;
+  top: 10%;
+  left: 10%;
+}
+
+.testimonial-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 40px;
+  flex-direction: column;
+}
+
+.heading-container {
+  margin-bottom: 100px;
+  color: rgb(210, 210, 210);
+  font-size: 100px;
+}
+
+.testimonial {
+  position: relative;
+  max-width: 400px;
+  max-height: 600px;
+  min-width: 300px;
+  min-height: 600px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 15px 35px rgba(0,0,0,.5);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  backdrop-filter: blur(10px);
+  padding: 50px;
+}
+
+.testimonial-title {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+  color: rgb(210, 210, 210);
+  font-size: 30px;
+}
+
+.testimonial-img {
+  width: 30%;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: rgb(210, 210, 210);
+}
+
+.testimonial-text {
+  position: absolute;
+  max-width: 50%;
+  top: 30%;
+  color: rgb(210, 210, 210);
+  text-align: center;
+  padding-right: 8%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.edit-button, .view-button {
+padding-right: 20px;
+}
+
+.loading {
+  display: none;
 }

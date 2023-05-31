@@ -12,6 +12,7 @@ import Contact from "../pages/Contact";
 import Store from "../pages/Store";
 import Success from "../pages/Success";
 import Cancel from "../pages/Cancel";
+import Services from "../pages/Services";
 
 const Main = (props) => {
     const URL = "http://localhost:8000"
@@ -62,19 +63,20 @@ const Main = (props) => {
     }, [])
 
     return (
-        <main>
+        <main className="main-container">
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/projects" element={<Projects />} />
+                <Route path="/services" index element={<Services />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/testimonials" element={<Testimonials testimonials={testimonials}/>} />
                 <Route path="/testimonials/new" element={<TestimonialNew testimonials={testimonials} createTestimonial={createTestimonial}/>} />
                 <Route path="/testimonials/:id/edit" element={<TestimonialEdit testimonials={testimonials} updateTestimonial={updateTestimonial}/>} />
                 <Route path="/testimonials/:id" element={<TestimonialShow testimonials={testimonials} deleteTestimonial={deleteTestimonial}/>} />
-                <Route path="store" index element={<Store />} />
-                <Route path="success" element={<Success />} />
-                <Route path="cancel" element={<Cancel />} />            
+                <Route path="/store" index element={<Store />} />
+                <Route path="/success" element={<Success />} />
+                <Route path="/cancel" element={<Cancel />} />            
             </Routes>
         </main>
     )
