@@ -2,16 +2,24 @@ import React from "react";
 
 const FirstText = () => (
     <div className="parallax-container">
-        <h5>Modern House, Tampa FL</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed posuere justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus efficitur consequat velit, a dictum ligula dapibus non. Nam a sem non sem posuere rhoncus. Integer et elit vel tortor auctor rutrum. Maecenas lacinia felis eu pulvinar facilisis. Mauris in mauris consectetur, placerat elit a, fringilla metus. Ut feugiat ante ac nunc iaculis tincidunt. Suspendisse eu turpis eu orci sodales viverra. Donec luctus lectus nec eleifend vestibulum. Suspendisse a eleifend lorem. Duis et metus felis.
+        <h5>Modern House, Las Vegas NV</h5>
+        <p>Welcome to the captivating interiors of the Modern House, a stunning residence situated in the vibrant city of Las Vegas, NV. Immerse yourself in the epitome of contemporary design as we take you on a journey through its meticulously curated spaces.
 
-        Quisque consectetur sem a magna lobortis rhoncus. Ut efficitur massa arcu, at ullamcorper ipsum tristique ac. Curabitur sed feugiat urna. Curabitur quis justo auctor, consectetur nisl nec, vulputate sapien. Vivamus laoreet risus a elit tincidunt bibendum. Sed vestibulum libero vitae diam scelerisque finibus. Curabitur non aliquam eros. Suspendisse ut dui eget metus consectetur iaculis.
+        Step into the Modern House and be greeted by a seamless blend of sophistication and comfort. The interiors exude a sense of modern luxury, featuring clean lines, sleek finishes, and a neutral color palette that creates an atmosphere of timeless elegance.
 
-        Etiam non lectus in sapien condimentum ultrices. Fusce mollis nisi ut enim viverra, eu interdum lectus dapibus. Donec dapibus elit vel urna consequat, in commodo odio feugiat. Fusce non congue nisi. Mauris non enim id nisl commodo cursus. Mauris eget metus orci. Praesent at vulputate purus. Phasellus volutpat neque vel varius eleifend. Vivamus sollicitudin sapien vel lectus vulputate, in euismod arcu elementum. Sed pellentesque erat a lectus rutrum, non sollicitudin dui tempor. Fusce posuere quam nec congue fringilla. Pellentesque vitae tristique tortor. Sed pretium, nunc nec rhoncus ullamcorper, lacus ipsum vulputate magna, at tincidunt mi neque et eros.
+        The open-concept living areas of the Modern House are designed to maximize space and flow. Expansive windows flood the rooms with natural light, illuminating the exquisite details and highlighting the breathtaking views of the surrounding landscape. Thoughtfully chosen furniture pieces, characterized by their sleek and minimalist design, create a harmonious balance between style and functionality.
 
-        In hac habitasse platea dictumst. Integer consectetur erat non semper interdum. Donec pulvinar, nisl in pulvinar bibendum, sapien lacus bibendum nulla, sit amet semper lectus enim et sem. Nulla facilisi. Ut ultricies, neque id tempor ultricies, ex lacus feugiat tellus, sit amet scelerisque leo velit id libero. Curabitur malesuada lacinia odio, in scelerisque urna rhoncus ac. Sed cursus auctor mi in feugiat. Vivamus accumsan vulputate tristique. Phasellus luctus varius ex. Suspendisse sit amet malesuada velit. Sed auctor nunc nec tempor tempor.
+        The living room serves as the centerpiece of the Modern House, offering a welcoming space for relaxation and entertainment. Plush seating arrangements are arranged around a focal point, such as a stylish fireplace or a contemporary media center, creating an inviting atmosphere for gatherings and socializing.
 
-        Proin gravida leo quis enim volutpat, ut tincidunt nisi tincidunt. Vestibulum ac mi sed diam egestas fermentum in in est. Sed viverra gravida tortor a consequat. Pellentesque eu tincidunt neque. Vestibulum ut diam tincidunt, feugiat nunc et, tristique mauris. Integer et sem id urna cursus vulputate. Donec in aliquet leo, sed placerat velit.
+        The kitchen in the Modern House is a culinary masterpiece. Featuring top-of-the-line appliances, custom cabinetry, and elegant countertops, it is a haven for aspiring chefs and those who appreciate fine cuisine. The carefully curated design elements, such as statement lighting fixtures and high-end finishes, add a touch of refinement to this culinary space.
+
+        The bedrooms in the Modern House are tranquil retreats that combine comfort with contemporary style. Luxurious bedding, sleek furnishings, and soft ambient lighting create an ambiance of serenity and relaxation. Floor-to-ceiling windows offer stunning views of the surrounding landscape, allowing residents to wake up to the beauty of Las Vegas every day.
+
+        The bathrooms in the Modern House are havens of indulgence. Featuring modern fixtures, luxurious materials, and clean lines, they provide a spa-like experience within the comfort of your own home. The sleek vanities, spacious showers, and soaking tubs create a sanctuary where residents can unwind and rejuvenate.
+
+        The Modern House also boasts impressive amenities designed to elevate the living experience. A private home theater provides an immersive entertainment experience, while a state-of-the-art fitness center allows residents to maintain an active and healthy lifestyle. The outdoor living spaces, including a meticulously landscaped garden and a stylish pool area, offer opportunities for relaxation and enjoyment in the year-round Las Vegas sunshine.
+
+        In summary, the interior design of the Modern House is a testament to contemporary elegance and refined living. Every detail has been carefully considered to create spaces that are both visually stunning and highly functional. Welcome to the Modern House, where modern luxury meets Las Vegas charm, and where impeccable design sets the stage for an extraordinary living experience.
         </p>
     </div>
 );

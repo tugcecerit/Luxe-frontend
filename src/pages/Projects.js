@@ -5,6 +5,8 @@ import SecondImage from '../components/SecondImage';
 import SecondText from '../components/SecondText';
 import ThirdImage from '../components/ThirdImage';
 import React from "react";
+import FourthImage from '../components/FourthImage';
+import ThirdText from '../components/ThirdText';
 
 function Projects() {
   return (
@@ -15,6 +17,8 @@ function Projects() {
       <FirstImage />
       <SecondText />
       <ThirdImage />
+      <ThirdText />
+      <FourthImage />
     </div>
   );
 }
