@@ -27,18 +27,21 @@ const TestimonialNew = (props) => {
     }
     
     return (
-            <div className="container">
-                <Link to='/testimonials' className='return-link'>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="100" fill="black" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+        <div className="new-form">
+            <div className="container form">
+            <div className="heading-container">
+            <h1 className="form-h1">New Testimonial</h1>
+                <Link to='/testimonials' className='return-link-edit'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="100" fill="rgb(210, 210, 210)" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5z"/>
                     </svg>
                 </Link>
-                <h1>New Testimonial</h1>
-                <form onSubmit={handleSubmit} className="pure-form pure-form-stacked">
-                            <label htmlFor="title">title</label>
+                </div>
+                <form onSubmit={handleSubmit} className="forms"  data-aos="zoom-out">
+                            <label htmlFor="title">Title</label>
                             <input
                                 id="title"
-                                className="pure-u-1"
+                                className="form-control input-field"
                                 type="text"
                                 value={form.title}
                                 name="title"
@@ -48,7 +51,7 @@ const TestimonialNew = (props) => {
                             <label htmlFor="image">Image</label>
                             <input
                                 id="image"
-                                className="pure-u-1"
+                                className="form-control input-field"
                                 type="text"
                                 value={form.image}
                                 name="image"
@@ -58,7 +61,7 @@ const TestimonialNew = (props) => {
                             <label htmlFor="opinion">Opinion</label>
                             <textarea
                                 id="opinion"
-                                className="pure-u-1"
+                                className="form-control input-field"
                                 value={form.opinion}
                                 name="opinion"
                                 placeholder="Opinion"
@@ -67,7 +70,7 @@ const TestimonialNew = (props) => {
                             <label htmlFor="createdBy">Created By</label>
                             <input
                                 id="createdBy"
-                                className="pure-u-1"
+                                className="form-control input-field"
                                 type="text"
                                 value={form.createdBy}
                                 name="createdBy"
@@ -77,15 +80,19 @@ const TestimonialNew = (props) => {
                             <label htmlFor="location">Location</label>
                                 <input
                                     id="location"
-                                    className="pure-u-1"
+                                    className="form-control input-field"
                                     type="text"
                                     value={form.location}
                                     name="location"
                                     placeholder="Location"
                                     onChange={handleChanges}
                                 />
-                        <input className="new-button" type="submit" value="Create Testimonial" />
-                </form>
+                        <button className="edit-button large" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" className="bi bi-plus-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                        </svg></button>
+                        </form>
+            </div>
             </div>
         )
     }

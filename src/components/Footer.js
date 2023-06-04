@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer(){
   return (
-    <footer style={{ backgroundColor: '#353535', color: 'rgb(210, 210, 210)' }}  className="text-center text-lg-start text-muted">
+    <footer style={{ backgroundColor: '#141311', color: 'rgb(210, 210, 210)' }}  className="text-center text-lg-start text-muted">
       <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
         <div className="me-5 d-none d-lg-block" style={{ color: 'rgb(210, 210, 210)' }}>
           <span className="me-5">Get connected with us on social networks:</span>
@@ -60,7 +60,7 @@ function Footer(){
             </div>
 
             <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4" >
-              <h6 className="text-uppercase fw-bold mb-4">LINKS</h6>
+              <h6 className="text-uppercase fw-bold mb-4" style={{ color: 'rgb(210, 210, 210)' }}>LINKS</h6>
               <p>
                 <a href="/projects" className="text-reset" style={{ color: 'rgb(210, 210, 210)' }}>
                   Projects

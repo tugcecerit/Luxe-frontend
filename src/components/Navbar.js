@@ -6,6 +6,7 @@ import LogoutButton from './LogoutButton';
 import { CartContext } from '../CartContext';
 import CartProduct from './CartProduct';
 import Checkout from './Checkout';
+import Logo from '../img/logo.png'
 
 function NavBar() {
   const cart = useContext(CartContext)
@@ -33,22 +34,22 @@ function NavBar() {
       collapseOnSelect
       expand="lg"
       variant="dark"
-      bg="dark"
+      bg="transparent"
     >
       <Container className={isNavbarOpen ? 'container-open' : ''}>
-        <Navbar.Brand href="/">LUXE</Navbar.Brand>
+        <Navbar.Brand href="/"><img src={Logo} alt={Logo} style={{ width: '100px', height: '60px' }} /></Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={handleNavbarToggle}
         />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/projects">Projects</Nav.Link>
-            <Nav.Link href="/services">Services</Nav.Link>
-            <Nav.Link href="/testimonials">Testimonials</Nav.Link>
-            <Nav.Link href="/store">Shop</Nav.Link>
-            <Nav.Link href="/about">About Us</Nav.Link>
-            <Nav.Link href="/contact">Contact Us</Nav.Link>
+            <Nav.Link href="/projects">PROJECTS</Nav.Link>
+            <Nav.Link href="/services">SERVICES</Nav.Link>
+            <Nav.Link href="/testimonials">TESTIMONIALS</Nav.Link>
+            <Nav.Link href="/store">SHOP</Nav.Link>
+            <Nav.Link href="/about">ABOUT US</Nav.Link>
+            <Nav.Link href="/contact">CONTACT US</Nav.Link>
           </Nav>
           <Nav className="profile">
           <Nav.Link eventKey={2}  href="#" className='navbar-button'>
@@ -69,7 +70,16 @@ function NavBar() {
       </Container>
       <style jsx="true">{`
         .navbar-custom {
-          background-color: #353535!important;
+          background-color: rgb(0, 0, 0, 0.4)!important;
+          position: fixed;
+          top: 0;
+          color: rgb(210, 210, 210)!important;
+          width: 100%;
+          z-index: 1000;
+          backdrop-filter: blur(30px);
+          box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+          font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+          font-weight: 900;
         }
         .container-open {
           background-color: rgba(0, 0, 0, 0.9);
@@ -92,16 +102,8 @@ function NavBar() {
         .profile {
             margin-top: 20px;
           }
-        .navbar-custom {
-          background-color: rgba(0, 0, 0, 0.05);
-        }
-        .navbar-custom .navbar-brand,
-        .navbar-custom .nav-link {
-          color: rgb(210, 210, 210)!important;
-        }
-        .navbar-custom .navbar-brand,
-        .navbar-custom .nav-link :hover {
-          color: rgb(210, 210, 210)!important;
+        .me-auto .nav-link:hover {
+          color: gray!important ;
         }
       `}</style>
       <Modal show={show} onHide={handleClose}>
@@ -111,15 +113,15 @@ function NavBar() {
             <Modal.Body>
                 {productsCount > 0 ?
                 <>
-                <p>Items in your cart:</p>
+                <p className='cart-p'>Items in your cart:</p>
                 {cart.items.map((currentProduct, idx) => (
                     <CartProduct key={idx} id={currentProduct.id} quantity={currentProduct.quantity} />
                 ))}
-                <h1>Total: {cart.getTotalCost().toFixed(2)}</h1>
+                <h1 className='cart-p'>Total: {cart.getTotalCost().toFixed(2)}</h1>
                 <Checkout />
                 </>
                 :
-                <h1>There are no items in your cart!</h1>}
+                <h1 className='cart-p'>There are no items in your cart!</h1>}
             </Modal.Body>
       </Modal>
     </Navbar>

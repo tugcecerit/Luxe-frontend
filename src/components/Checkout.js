@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { CartContext } from '../CartContext';
 
 function Checkout() {
@@ -19,7 +19,7 @@ function Checkout() {
         });
     }
 
-    return <button onClick={checkout}>Checkout</button>;
+    return <button className='btn btn-secondary btn-block mt-3' onClick={checkout}>Checkout</button>;
 }
 
 export default Checkout;

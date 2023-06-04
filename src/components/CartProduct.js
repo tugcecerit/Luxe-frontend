@@ -11,9 +11,9 @@ function CartProduct(props) {
     return (
         <>
             <h3>{productData.title}</h3>
-            <p>{quantity} total</p>
-            <p>${(quantity * productData.price).toFixed(2)}</p>
-            <Button size="m" onClick={() => cart.deleteFromCart(id)}>Remove</Button>
+            <p className='cart-p'>{quantity} total</p>
+            <p className='cart-p'>${(quantity * productData.price).toFixed(2)}</p>
+            <Button variant="secondary" size="m" onClick={() => cart.deleteFromCart(id)}>Remove</Button>
             <hr></hr>
         </>
     )
