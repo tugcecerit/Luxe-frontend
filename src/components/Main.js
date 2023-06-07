@@ -15,7 +15,7 @@ import Cancel from "../pages/Cancel";
 import Services from "../pages/Services";
 
 const Main = (props) => {
-    const URL = "http://localhost:8000"
+    const URL = process.env.REACT_APP_BASE_URL
     const [testimonials, setTestimonials] = useState(null)
     
     const getTestimonials = async () => {
