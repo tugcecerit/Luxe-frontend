@@ -10,10 +10,10 @@ function CartProduct(props) {
     const productData = getProductData(id);
     return (
         <>
-            <h3>{productData.title}</h3>
+            <h3 style={{ fontSize: "35px" }}>{productData.title}</h3>
             <p className='cart-p'>{quantity} total</p>
             <p className='cart-p'>${(quantity * productData.price).toFixed(2)}</p>
-            <Button variant="secondary" size="m" onClick={() => cart.deleteFromCart(id)}>Remove</Button>
+            <Button variant="secondary" size="m" onClick={() => cart.deleteFromCart(id)} style={{ fontSize: "22px" }}>Remove</Button>
             <hr></hr>
         </>
     )

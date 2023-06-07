@@ -7,8 +7,8 @@ import ShopBg from '../img/shop-bg.jpg'
 function Store() {
     return (
     <>
-<div className="position-relative">
-  <img className="d-block w-100" src={ShopBg} alt="Background" />
+<div className="position-relative store-div">
+  <img className="d-block w-100 store" src={ShopBg} alt="Background" />
   <h1 className="position-absolute top-50 start-50 translate-middle text-center p-3 shop-text">
     Welcome to Luxe Store!
   </h1>

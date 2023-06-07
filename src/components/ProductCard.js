@@ -15,18 +15,19 @@ function ProductCard(props) {
   };
 
   return (
-    <Card style={{ backgroundColor: 'transparent' }}>
+    <Card style={{ backgroundColor: 'transparent', fontFamily: "Teko"}}>
       <Card.Body>
-        <Card.Title>{product.title}</Card.Title>
+        <Card.Title style={{ fontSize: "30px", paddingTop: "20px"}}>{product.title}</Card.Title>
         <img src={product.img} alt={product.title} style={{ width: '15rem', height: '15rem' }} />
-        <Card.Text>${product.price}</Card.Text>
+        <Card.Text style={{ fontSize: "25px"}}>${product.price}</Card.Text>
         <Link
           onClick={handleCollapse}
           aria-expanded={isCollapsed}
           aria-controls={`collapseExample-${product.id}`}
           className="detail-link"
+          style={{ fontFamily: "Teko", fontSize: "25px" }}
         >
-          Description <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-arrow-bar-down" viewBox="0 0 16 16">
+          Description <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(177, 177, 177)" class="bi bi-arrow-bar-down" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M1 3.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5zM8 6a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 .708-.708L7.5 12.293V6.5A.5.5 0 0 1 8 6z"/>
         </svg>
         </Link><br></br>
@@ -40,16 +41,16 @@ function ProductCard(props) {
         {productQuantity > 0 ? (
           <>
             <Form as={Row}>
-              <Form.Label column="true" sm="6" className="cart-p">In Cart: {productQuantity}</Form.Label>
+              <Form.Label column="true" sm="6" className="cart-p" style={{ fontSize: "25px", fontFamily: "Teko" }}>In Cart: {productQuantity}</Form.Label>
               <Col>
-                <Button variant="light" sm="6" onClick={() => cart.addOneToCart(product.id)} className="mx-2">+</Button>
-                <Button variant="light" sm="6" onClick={() => cart.removeOneFromCart(product.id)} className="mx-2">-</Button>
+                <Button variant="light" sm="6" onClick={() => cart.addOneToCart(product.id)} className="mx-2" style={{ fontSize: "20px" }}>+</Button>
+                <Button variant="light" sm="6" onClick={() => cart.removeOneFromCart(product.id)} className="mx-2" style={{ fontSize: "20px"}}>-</Button>
               </Col>
             </Form>
-            <Button variant="secondary" onClick={() => cart.deleteFromCart(product.id)} className="my-2">Remove</Button>
+            <Button variant="secondary" onClick={() => cart.deleteFromCart(product.id)} className="my-2" style={{ fontSize: "22px" }}>Remove</Button>
           </>
         ) : (
-          <Button variant="secondary" onClick={() => cart.addOneToCart(product.id)}>Add to Cart</Button>)}
+          <Button variant="secondary" onClick={() => cart.addOneToCart(product.id)} style={{ fontSize: "22px" }}>Add to Cart</Button>)}
       </Card.Body>
     </Card>
   );

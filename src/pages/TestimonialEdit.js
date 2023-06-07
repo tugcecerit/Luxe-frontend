@@ -52,7 +52,9 @@ const TestimonialEdit = (props) => {
                     </Link>
                     </div>
                     <form onSubmit={handleSubmit} className="forms"  data-aos="zoom-in">
-                                <label htmlFor="title">Title</label>
+                    <div className="form-group row">
+                                <label className="col-sm-2 col-form-label contact-label"  htmlFor="title">Title</label>
+                                <div className="col-sm-8">
                                 <input
                                     id="title"
                                     className="form-control input-field"
@@ -62,7 +64,11 @@ const TestimonialEdit = (props) => {
                                     placeholder="Title"
                                     onChange={handleChanges}
                                 />
-                                <label htmlFor="image">Image</label>
+                                </div>
+                                </div><br></br>
+                                <div className="form-group row">
+                                <label className="col-sm-2 col-form-label contact-label"  htmlFor="image">Image</label>
+                                <div className="col-sm-8">
                                 <input
                                     id="image"
                                     className="form-control input-field"
@@ -72,7 +78,11 @@ const TestimonialEdit = (props) => {
                                     placeholder="Image Link"
                                     onChange={handleChanges}
                                 />
-                                <label htmlFor="opinion">Opinion</label>
+                                </div>
+                                </div><br></br>
+                                <div className="form-group row">
+                                <label className="col-sm-2 col-form-label contact-label"  htmlFor="opinion">Opinion</label>
+                                <div className="col-sm-8">
                                 <textarea
                                     id="opinion"
                                     className="form-control input-field"
@@ -81,7 +91,11 @@ const TestimonialEdit = (props) => {
                                     placeholder="Opinion"
                                     onChange={handleChanges}
                                 ></textarea>
-                                <label htmlFor="createdBy">Created By</label>
+                                </div>
+                                </div><br></br> 
+                                <div className="form-group row">
+                                <label className="col-sm-2 col-form-label contact-label"  htmlFor="createdBy">Created By</label>
+                                <div className="col-sm-8">
                                 <input
                                     id="createdBy"
                                     className="form-control input-field"
@@ -91,7 +105,11 @@ const TestimonialEdit = (props) => {
                                     placeholder="Created By"
                                     onChange={handleChanges}
                                 />
-                                <label htmlFor="location">Location</label>
+                                </div>
+                                </div><br></br>
+                                <div className="form-group row">
+                                <label className="col-sm-2 col-form-label contact-label"  htmlFor="location">Location</label>
+                                <div className="col-sm-8">
                                     <input
                                         id="location"
                                         className="form-control input-field"
@@ -100,7 +118,9 @@ const TestimonialEdit = (props) => {
                                         name="location"
                                         placeholder="Location"
                                         onChange={handleChanges}
-                                    />
+                                />
+                                </div>
+                                </div><br></br>
                     <input className="edit-button large" type="submit" value="&#9998;" />
                     </form>
                 </div>
