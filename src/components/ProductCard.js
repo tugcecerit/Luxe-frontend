@@ -16,7 +16,7 @@ function ProductCard(props) {
 
   return (
     <Card style={{ backgroundColor: 'transparent', fontFamily: "Teko"}}>
-      <Card.Body>
+      <Card.Body className='shop-card'>
         <Card.Title style={{ fontSize: "30px", paddingTop: "20px"}}>{product.title}</Card.Title>
         <img src={product.img} alt={product.title} style={{ width: '15rem', height: '15rem' }} />
         <Card.Text style={{ fontSize: "25px"}}>${product.price}</Card.Text>

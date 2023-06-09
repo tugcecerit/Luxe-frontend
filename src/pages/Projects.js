@@ -17,6 +17,7 @@ function Projects() {
       <FirstImage />
       <SecondText />
       <ThirdImage />
+      <FirstImage />
       <ThirdText />
       <FourthImage />
     </div>

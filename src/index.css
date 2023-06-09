@@ -14,6 +14,11 @@ body {
   cursor:rgba(0,0,0,0) 0%,
   rgba(0,0,0,.5) 80%,
   rgba(0,0,0,.95) 100%;
+  background-color: #141311;
+}
+
+:root {
+  background-color: #141311;
 }
 
 code {
@@ -373,10 +378,15 @@ h1 {
   padding: 10px;
 }
 
+.shop-card {
+    backdrop-filter: blur(40px);
+}
+
+
+
 .card-body {
   background-color: rgba(255, 255, 255, 0.03);
   box-shadow: 0 15px 35px rgba(0,0,0,.9);
-  backdrop-filter: blur(40px);
   border-radius: 8px;
 }
 
@@ -406,6 +416,10 @@ h1 {
 
 .row {
   color: rgb(74, 74, 74);
+}
+
+#section-4 h1 {
+  padding: 0 0 30px 0;
 }
 
 .cart-p, .card-text {
@@ -448,11 +462,20 @@ button a:hover{
   margin-top:-10rem;
 }
 
-.card{
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9);
+.home-card{
+  transition: all 0.3s;
+  cursor: zoom-in;
 }
 
-#section-1, #section-2, #section-3{
+.home-card:hover {
+  transform: scale(1.05);
+}
+
+.custom-row {
+  padding-bottom: 20%;
+}
+
+#section-1, #section-3{
   min-height: 100vh;
   width: 100%;
   display: flex;
@@ -461,8 +484,48 @@ button a:hover{
 
 }
 
+#section-4 {
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+}
+
+.card-container {
+padding: 100px;
+}
+
+.card-text {
+  height: 100px;
+  overflow: auto;
+}
+
+
 #section-2 {
+  min-height: 100vh;
+  width: 100%;
   background-color: #141311;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left-side {
+  margin-right: 0;
+  padding-right: 0;
+  justify-content: center;
+}
+
+.right-side {
+  text-align: center;
+  padding: 50px;
+}
+
+.home-text {
+  width: 100%;
+  padding: 30px;
+  font-size: 28px;
+  font-weight: 300;
+  text-align:justify;
 }
 
 .scroll-down {
@@ -750,16 +813,6 @@ padding-bottom: 20px;
   }
 }
 
-/* input[type=text] {
-  background-color: #989595;
-  border:2px solid #474646;
-}
-
-textarea[name=opinion] {
-  background-color: #989595;
-  border:2px solid #474646;
-} */
-
 .submit-button {
   position: absolute;
   left: 30%
@@ -877,7 +930,6 @@ color:#989595;
 
   .contact-label {
   font-weight: 500;
-  /* margin: 10px; */
   }
   .submit-button {
     left: 40%;
