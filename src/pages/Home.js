@@ -1,7 +1,6 @@
 import '../App.css';
 import MainPic from '../img/MainPic.mov';
 import React, { useRef, useEffect } from 'react';
-import React, { useRef, useEffect } from 'react';
 import HomeBg from '../img/Homebg.png'
 import HomeBg2 from '../img/Homebg2.png'
 import Card from 'react-bootstrap/Card';
@@ -10,21 +9,6 @@ import Home2 from '../img/Home2.jpeg'
 import Home3 from '../img/Home3.jpeg'
 import Home4 from '../img/Home4.jpeg'
 import Home5 from '../img/Home5.jpeg'
-
-import Home12 from '../img/Home12.jpeg'
-import Home13 from '../img/Home14.png'
-import Home14 from '../img/Home13.png'
-import { Link } from 'react-router-dom';
-import 'aos/dist/aos.css';
-import AOS from 'aos';
-import HomeBg2 from '../img/Homebg2.png'
-import Card from 'react-bootstrap/Card';
-import Home1 from '../img/Home1.jpeg'
-import Home2 from '../img/Home2.jpeg'
-import Home3 from '../img/Home3.jpeg'
-import Home4 from '../img/Home4.jpeg'
-import Home5 from '../img/Home5.jpeg'
-
 import Home12 from '../img/Home12.jpeg'
 import Home13 from '../img/Home14.png'
 import Home14 from '../img/Home13.png'
