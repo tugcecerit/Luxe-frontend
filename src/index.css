@@ -319,8 +319,8 @@ h1 {
 }
 
 .show-image img {
-  margin: 100px;
-  width: 600px;
+  margin: 150px 0 100px 0;
+  width: 650px;
 }
 
 .outside-container {

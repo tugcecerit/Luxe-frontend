@@ -46,8 +46,8 @@ function Home() {
         <p className='home-text'> As a leading interior design company, we are dedicated to transforming spaces into captivating havens that reflect our clients' unique vision and lifestyle. With a team of highly skilled professionals, we strive to create exceptional environments that inspire and delight.</p>
         <p className='home-text'>Throughout our journey, we have had the privilege of collaborating with discerning clients who appreciate our dedication to quality and craftsmanship. However, our true success lies in the lasting relationships we build with our clients, who trust us to transform their dreams into reality.</p>
         <p className='home-text'>Read more <Link to='/about' onClick={() => window.scrollTo(0, 0)}>
-        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="100" fill="rgb(210, 210, 210)" class="bi bi-arrow-right" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="100" fill="rgb(210, 210, 210)" className="bi bi-arrow-right" viewBox="0 0 16 16">
+        <path fillRule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
         </svg>
         </Link></p>
         </div>
@@ -64,8 +64,8 @@ function Home() {
         <p className='home-text'>These testimonials showcase the unique stories and experiences of our clients, highlighting how our design solutions have enhanced their lives and businesses. Each testimonial offers a glimpse into the collaborative process we engage in, ensuring that every project reflects the client's vision and exceeds their expectations.</p>
         <p className='home-text'>Click to see what people say
         <Link to='/testimonials' onClick={() => window.scrollTo(0, 0)}>
-        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="100" fill="rgb(210, 210, 210)" class="bi bi-arrow-right" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="100" fill="rgb(210, 210, 210)" className="bi bi-arrow-right" viewBox="0 0 16 16">
+        <path fillRule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
         </svg>
         </Link></p>
         </div>
