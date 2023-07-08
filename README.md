@@ -2,8 +2,8 @@
 ## Project Choice
 Interior Design Company Website - Luxe
 ## Links For The Website
-* https://luxe-frontend.herokuapp.com/
-* https://luxe-backend.herokuapp.com/testimonials
+* https://luxe-frontend.vercel.app/
+* https://luxe-backend-chi.vercel.app/testimonials
 ## Project Description
 ### General App Idea/Purpose
 The purpose of the Luxe Interiors website is to create an online presence for an interior design company. The website serves as a platform to showcase the company's projects, provide information about the company, and allow users to contact the company for inquiries or project requests. The website includes a shopping cart feature for purchasing design-related products, and a sign-in/sign-out functionality for any users but give a permission only to business workers to add, edit or delete testimonial page.
